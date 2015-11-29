@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "echo \"Starting server on port 3000\" && node index.js"
   },
-  "author": "Jordan Pappas <jordanpappas@yahoo.com>",
+  "author": "Jordan Pappas <jordanpappas222@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "co": "^4.6.0",
