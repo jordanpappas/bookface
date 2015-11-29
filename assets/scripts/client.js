@@ -1,7 +1,7 @@
 console.log('test 123:)')
 
 // ajax login
-$('form').on('submit', function(e) {
+$('#loginForm').on('submit', function(e) {
   e.preventDefault()
   var $data = $(this).serialize()
 

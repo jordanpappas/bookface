@@ -6,10 +6,10 @@ html(lang="en")
   body
     h1 bookface
     
-    if loggedIn
+    if isAuthed
       include bodyloggedin
     
-    if !loggedIn
+    if !isAuthed
       include bodyloggedout
       
   include javascript

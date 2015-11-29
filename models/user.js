@@ -23,7 +23,9 @@ const User = new mongoose.Schema({
     type: String,
     required: true
   },
-  friends: [String]
+  friends: [String],
+  requests: [String],
+  requested: [String]
 })
 
 User.pre('save', function(done) {

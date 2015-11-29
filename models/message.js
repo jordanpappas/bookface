@@ -28,6 +28,11 @@ const Message = new mongoose.Schema({
     type: Boolean,
     required: true,
     default: false
+  },
+  replied: {
+    type: Boolean,
+    required: true,
+    default: false
   }
 })
 

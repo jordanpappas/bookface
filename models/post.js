@@ -7,8 +7,14 @@ const Post = new mongoose.Schema({
     default: Date.now
   },
   author: {
-    type: String,
-    required: true
+    id: {
+      type: String,
+      required: true
+    },
+    username: {
+      type: String,
+      required: true
+    }
   },
   body: {
     type: String,
@@ -21,3 +27,5 @@ const Post = new mongoose.Schema({
   },
   likers: [String]
 })
+
+mongoose.model('Post', Post)

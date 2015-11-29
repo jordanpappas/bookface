@@ -4,10 +4,10 @@ const sleep = require('co-sleep')
 const mongoose = require('mongoose')
 const User = mongoose.model('User')
 
-exports.logout = ctx => {
+exports.logout = co.wrap(function* (ctx) {
   ctx.session = null
   ctx.redirect('/')
-}
+})
 
 exports.login = co.wrap(function* (ctx, next) {
   var body = yield parse(ctx)
@@ -16,7 +16,9 @@ exports.login = co.wrap(function* (ctx, next) {
   if (!user) return ctx.body = { success: false }
 
   if(yield user.verifyPassword(body.password)) {
+    ctx.session.username = user.username
     ctx.session.user = user._id
+    ctx.session.isAuthed = true
     return ctx.body = { success: true }
   }
 
