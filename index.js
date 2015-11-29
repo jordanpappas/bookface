@@ -48,11 +48,11 @@ router
   .get  ( '/accept/:id'   , controllers.user.acceptFriend   )
 
 // posts
-  .post   ('/posts'         ,        controllers.post.newPost       )
-  .delete ('/posts/:id'     ,        controllers.post.removePost    )
-  .get    ('/posts/:id'     ,        controllers.post.getPost       )
-  .get    ('/like/:id'      ,        controllers.post.likePost      )
-  .get    ('/unlike/:id'    ,        controllers.post.unlikePost    )
+  .post   ('/posts'         , controllers.post.newPost       )
+  .delete ('/posts/:id'     , controllers.post.removePost    )
+  .get    ('/posts/:id'     , controllers.post.getPost       )
+  .get    ('/like/:id'      , controllers.post.likePost      )
+  .get    ('/unlike/:id'    , controllers.post.unlikePost    )
 
   .get('/posts/pages/:page', controllers.post.getPosts, controllers.view.testPosts)
 
