@@ -1,9 +1,0 @@
-each post in posts
-  ul
-    li Author: #{post.author.username}
-    li Date: #{post.date}
-    li Likes: 
-      a(href="#")= post.likes
-    li= post.body
-    li
-      a(href="/like/#{post._id}") like
