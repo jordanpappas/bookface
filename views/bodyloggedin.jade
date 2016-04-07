@@ -1,0 +1,34 @@
+p #{username}'s profile
+p
+  a(href="/logout") Log out.
+br
+  
+- var len = requests.length
+case len
+  when 0
+    h3 no requests.
+  when 1
+    h3 you have one request.
+  default
+    h3 you have #{len} requests.
+br
+ul
+  each friend in requests
+    li= friend
+
+h1 New post
+form(method="post" action="/posts" id="postForm")
+  input(type="text" name="body" placeholder="new post")
+  input(type="submit" name="post" value="post")
+
+h1 Recent posts
+
+each post in posts
+  ul
+    li Author: #{post.author.username}
+    li Date: #{post.date}
+    li Likes: 
+      a(href="#")= post.likes
+    li= post.body
+    li
+      a(href="/like/#{post._id}") like

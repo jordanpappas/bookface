@@ -1,0 +1,30 @@
+{
+  "name": "bookface",
+  "version": "1.0.0",
+  "description": "social meedz",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "echo \"Starting server on port 3000\" && node index.js"
+  },
+  "author": "Jordan Pappas <jordanpappas222@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "co": "^4.6.0",
+    "co-bcrypt": "^1.0.0",
+    "co-body": "^4.0.0",
+    "co-sleep": "0.0.1",
+    "co-views": "^2.1.0",
+    "jade": "^1.11.0",
+    "koa": "^2.0.0-alpha.3",
+    "koa-convert": "^1.2.0",
+    "koa-router": "^6.0.0",
+    "koa-session": "^3.3.1",
+    "koa-static": "^1.5.2",
+    "mongoose": "^4.2.7",
+    "prettyjson": "^1.1.3",
+    "socket.io": "^1.3.7",
+    "socket.io-client": "^1.3.7",
+    "validator": "^4.3.0"
+  }
+}
